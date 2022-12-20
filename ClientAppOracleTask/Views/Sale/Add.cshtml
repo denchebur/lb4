@@ -1,0 +1,22 @@
+﻿@model ClientAppOracleTask.Entities.Sale
+@{ ViewBag.Title = "Add sale"; }
+
+<h2>Add new sale</h2>
+<form method="post" asp-controller="Sale" asp-action="Add">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="CheckNo" class="control-label"></label>
+        <input type="number" asp-for="CheckNo" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="ProductId" class="control-label"></label>
+        <input type="number" asp-for="ProductId" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Quantity" class="control-label"></label>
+        <input type="number" asp-for="Quantity" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Add" class="btn btn-outline-primary" />
+    </div>
+</form>

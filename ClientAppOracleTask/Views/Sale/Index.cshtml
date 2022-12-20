@@ -1,0 +1,18 @@
+﻿@model IEnumerable<ClientAppOracleTask.Entities.Sale>
+@{
+    ViewBag.Title = "List of sales";
+}
+
+<table class="table">
+    <tr><th>№</th><th>CheckNo</th><th>ProductId</th><th>DateSale</th><th>Quantity</th></tr>
+    @foreach (var sale in Model)
+    {
+        <tr>
+            <td>@sale.Id</td>
+            <td>@sale.CheckNo</td>
+            <td>@sale.ProductId</td>
+            <td>@sale.DateSale</td>
+            <td>@sale.Quantity</td>
+        </tr>
+    }
+</table>

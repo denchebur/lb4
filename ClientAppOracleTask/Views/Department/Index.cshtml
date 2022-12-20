@@ -1,0 +1,16 @@
+﻿@model IEnumerable<ClientAppOracleTask.Entities.Department>
+@{
+    ViewBag.Title = "List of departments";
+}
+
+<table class="table">
+    <tr><th>№</th><th>Department Name</th><th>Info</th></tr>
+    @foreach (var department in Model)
+    {
+        <tr>
+            <td>@department.Id</td>
+            <td>@department.Name</td>
+            <td>@department.Info</td>
+        </tr>
+    }
+</table>
